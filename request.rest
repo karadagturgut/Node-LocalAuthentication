@@ -1,0 +1,19 @@
+GET http://localhost:3000/kullanici
+
+###
+
+POST  http://localhost:3000/kullanici
+Content-Type: application/json
+
+{
+    "kullaniciAdi":"Turgut Karadağ",
+    "sifre":"şifre"
+}
+###
+POST  http://localhost:3000/kullanici/giris
+Content-Type: application/json
+
+{
+    "kullaniciAdi":"Turgut Karadağ",
+    "sifre":"şifre"
+}
