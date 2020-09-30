@@ -1,30 +1,30 @@
 
-# NodeJS-LocalAuthentication 
+# Node-LocalAuthentication 
 
-Bu uygulamada, yerel ortamda kullanıcı kaydı ve bu kayıtlı bilgilerle giriş yapılmasına yönelik bir çalışma yapılmıştır. Herhangi veritabanı
-bağlantısı bulunmadan bilgiler, JSON veri formatında tutulmaktadır. 
+Bu uygulamada, yerel ortamda kullanÄ±cÄ± kaydÄ± ve bu kayÄ±tlÄ± bilgilerle giriÅŸ yapÄ±lmasÄ±na yÃ¶nelik bir Ã§alÄ±ÅŸma yapÄ±lmÄ±ÅŸtÄ±r. Herhangi veritabanÄ±
+baÄŸlantÄ±sÄ± bulunmadan bilgiler, JSON veri formatÄ±nda tutulmaktadÄ±r. 
 
-JSON dizisi içerisinde tutulan kullanıcı şifresi, **bcrypt** eklentisi sayesinde korumalı olarak kaydedilecektir. bcrypt ile ilgili detaylı bilgiyi ve kullanımı
-için 'https://www.npmjs.com/package/bcrypt' adresini inceleyebilirsiniz.
+JSON dizisi iÃ§erisinde tutulan kullanÄ±cÄ± ÅŸifresi, **bcrypt** eklentisi sayesinde korumalÄ± olarak kaydedilecektir. bcrypt ile ilgili detaylÄ± bilgiyi ve kullanÄ±mÄ±
+iÃ§in 'https://www.npmjs.com/package/bcrypt' adresini inceleyebilirsiniz.
 
 
 ## Gereksinimler:
 
-Get ve Post metodlarını kullanmak adına **Postman** isimli uygulama 'https://www.getpostman.com/downloads/' adresinden edinilebilir. Eğer yardımcı uygulama yüklenmek
-istenmiyorsa **Visual Studio Code** üzerinde çalışan, **rest-client** eklentisini 'https://marketplace.visualstudio.com/items?itemName=humao.rest-client' adresinden 
-edinerek, proje içerisindeki 'request.rest' dosyasında yazılmış Get ve Post metodları ile uygulama test edilebilir. Ayrıca 'npm install' komutu çalıştırılarak, gerekli
-araçlar ve bağımlılıklar proje içerisine yüklenir.
+Get ve Post metodlarÄ±nÄ± kullanmak adÄ±na **Postman** isimli uygulama 'https://www.getpostman.com/downloads/' adresinden edinilebilir. EÄŸer yardÄ±mcÄ± uygulama yÃ¼klenmek
+istenmiyorsa **Visual Studio Code** Ã¼zerinde Ã§alÄ±ÅŸan, **rest-client** eklentisini 'https://marketplace.visualstudio.com/items?itemName=humao.rest-client' adresinden 
+edinerek, proje iÃ§erisindeki 'request.rest' dosyasÄ±nda yazÄ±lmÄ±ÅŸ Get ve Post metodlarÄ± ile uygulama test edilebilir. AyrÄ±ca 'npm install' komutu Ã§alÄ±ÅŸtÄ±rÄ±larak, gerekli
+araÃ§lar ve baÄŸÄ±mlÄ±lÄ±klar proje iÃ§erisine yÃ¼klenir.
 
 
-## Kullanım:
+## KullanÄ±m:
 
-Komut satırı üzerinden 'npm run devStart' yazılarak uygulama çalıştırılabilir. Bu adımdan önce, 'npm install' komutu ile gerekli araçlar ve bağımlılıkları proje içerisine
-eklendiğinden emin olunuz. İstek örnekleri şu şekildedir:
+Komut satÄ±rÄ± Ã¼zerinden 'npm run devStart' yazÄ±larak uygulama Ã§alÄ±ÅŸtÄ±rÄ±labilir. Bu adÄ±mdan Ã¶nce, 'npm install' komutu ile gerekli araÃ§lar ve baÄŸÄ±mlÄ±lÄ±klarÄ± proje iÃ§erisine
+eklendiÄŸinden emin olunuz. Ä°stek Ã¶rnekleri ÅŸu ÅŸekildedir:
 
-- GET http://localhost:3000/kullanici : Kaydedilmiş kullanıcı ya da kullanıcıların, Kullanıcı adı ve korumalı şifrelerini görebileceğiniz istek. 
+- GET http://localhost:3000/kullanici : KaydedilmiÅŸ kullanÄ±cÄ± ya da kullanÄ±cÄ±larÄ±n, KullanÄ±cÄ± adÄ± ve korumalÄ± ÅŸifrelerini gÃ¶rebileceÄŸiniz istek. 
 
-- POST http://localhost:3000/kullanici/kayit : Kullanıcı kaydı istek sayfası. Postman vb. bir uygulama ile test yapılacaksa, 'kullaniciAdi' ve 'sifre' değerlerine
-istenilen değerler girilerek işlem yapılmalıdır.
+- POST http://localhost:3000/kullanici/kayit : KullanÄ±cÄ± kaydÄ± istek sayfasÄ±. Postman vb. bir uygulama ile test yapÄ±lacaksa, 'kullaniciAdi' ve 'sifre' deÄŸerlerine
+istenilen deÄŸerler girilerek iÅŸlem yapÄ±lmalÄ±dÄ±r.
 
-- POST http://localhost:3000/kullanici/giris : Kayıtlı olan kullanıcılar ile giriş yapma isteği.  
+- POST http://localhost:3000/kullanici/giris : KayÄ±tlÄ± olan kullanÄ±cÄ±lar ile giriÅŸ yapma isteÄŸi.  
 
